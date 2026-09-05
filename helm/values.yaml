@@ -1,0 +1,29 @@
+replicaCount: 1
+
+image:
+  registry: "ghcr.io"
+  repository: "arturskrin/kbot"
+  tag: "v1.0.0"
+  os: linux
+  arch: amd64
+  pullPolicy: IfNotPresent
+
+serviceAccount:
+  create: true
+  name: ""
+
+podAnnotations: {}
+podSecurityContext: {}
+securityContext: {}
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 200m
+    memory: 128Mi
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
